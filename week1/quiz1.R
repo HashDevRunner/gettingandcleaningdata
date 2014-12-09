@@ -1,4 +1,4 @@
-setwd("/Users/Paul/Desktop/R/Getting and Cleaning Data/")
+# setwd("/Users/Paul/Desktop/R/Getting and Cleaning Data/")
 
 data <- read.table( "getdata-data-ss06hid.csv", 
                     sep = ",", 

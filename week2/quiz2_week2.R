@@ -1,4 +1,4 @@
-setwd("/Users/Paul/Desktop/R/Getting and Cleaning Data/")
+# setwd("/Users/Paul/Desktop/R/Getting and Cleaning Data/")
 
 #From: https://github.com/hadley/httr/blob/master/demo/oauth2-github.r
 library(httr)
@@ -23,7 +23,8 @@ print(ans) #answer to 1
 #----------- number 2 ----------------
 library(sqldf)
 acs <- read.csv("getdata-data-ss06pid.csv")
-sqldf("select agep,pwgtp1 from acs where AGEP < 50")
+query <- c("select agep,pwgtp1 from acs where AGEP < 50")
+sqldf(query)
 
 #----------- number 4 ----------------
 con = url("http://biostat.jhsph.edu/~jleek/contact.html")
@@ -45,5 +46,4 @@ df_5 <- read.fwf("getdata-wksst8110.for",
                  col.names = colnames)
 
 ans5 <- sum(df_5[,4])
-print(ans5)
-
+print(cat("Answer 5:",ans5[1]))
