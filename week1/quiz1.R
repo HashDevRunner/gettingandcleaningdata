@@ -24,7 +24,7 @@ rootNode <- xmlRoot(doc)
 
 table(xpathSApply(rootNode,"//zipcode",xmlValue))["21231"]
 
-## Answer#5: DT
+## Answer#5: DT test
 file_5 = "getdata-data-ss06pid.csv"
 library(data.table)
 DT <- fread(file_5)
